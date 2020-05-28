@@ -1,0 +1,57 @@
+class User
+{
+  email;
+  password;
+}
+
+class Tutor
+{
+    name;
+  CV;
+  0..1 -- 1 User;
+}
+
+class Courses
+{
+  Code;
+  Name;
+  * -- * Tutor;
+  * -- * User;
+}
+
+class Matches
+{
+  1 -- 1 Tutor;
+  1 -- 1 User;
+}
+
+//$?[End_of_model]$?
+
+namespace -;
+
+
+class User
+{
+  position 352 294 138 75;
+}
+
+class Tutor
+{
+  position 49 299 112 75;
+  position.association Tutor__User 112,37 0,38;
+}
+
+class Courses
+{
+  position 202 114 109 58;
+  position.association Courses__Tutor 0,61 70,0;
+  position.association Courses__User 101,75 42,0;
+}
+
+class Matches
+{
+  position 214 464 109 41;
+  position.association Matches__Tutor 7,0 74,75;
+  position.association Matches__User 109,5 30,75;
+}
+

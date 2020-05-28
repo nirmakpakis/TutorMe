@@ -255,6 +255,18 @@
         </nav>
         <!-- End of Topbar -->
 
+
+        <br/>
+        <uL>
+        <% @courses.each do |course| %>
+          <li>
+            <%=course.code %>: <%= course.name %>
+             <%= link_to "Get tutored ", "#" %>   
+             <%= link_to "Be a tutor", "#" %>
+          </li>
+        <% end %>
+        </uL>
+        
       </div>
           
       <!-- End of Main Content -->

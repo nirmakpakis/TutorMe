@@ -4,6 +4,7 @@ class ProjectController < ApplicationController
 
   def index
     @user = current_user
+    @courses = Course.all
   end
 
   private 

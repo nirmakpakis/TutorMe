@@ -21,8 +21,8 @@ class Courses
 
 class Matches
 {
-  1 -- 1 Tutor;
-  1 -- 1 User;
+  * -- 1 Tutor;
+  * -- 1 User;
 }
 
 //$?[End_of_model]$?
@@ -54,4 +54,3 @@ class Matches
   position.association Matches__Tutor 7,0 74,75;
   position.association Matches__User 109,5 30,75;
 }
-

@@ -1,0 +1,8 @@
+<%= form_for(course) do |f| %>
+Code: <%= f.text_field :code %>
+<br/>
+Name: <%= f.text_field :name %>
+<br/>
+<br/>
+<%= f.button :submit, class: "button btn-primary is-info" %>
+<% end %>

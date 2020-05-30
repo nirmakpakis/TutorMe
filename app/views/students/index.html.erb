@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+        <h2> students: </h2>
+        <br/>
+        <ul>
+            <% @students.each do |student| %>
+            <li>
+                <%= render 'student', student: student %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <br/>
+  </div>
+</section>

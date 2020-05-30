@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  
-  root to: 'project#index'
-  
+  root to: 'courses#index'
   devise_for :users
+
+  resources :courses, :tutors, :students
+
+  get '/tutor/:user_id/course/:course_id', to: 'tutors#create_tutor', as: 'create_tutor'
+  get '/student/:user_id/course/:course_id', to: 'students#create_student', as: 'create_student'
   
   # get '/login' => 'project#login'
   # get '/index' => 'project#index'

@@ -1,0 +1,8 @@
+<p>
+    <h3> <%= tutor.email %> </h3>
+    <ul>
+      <% tutor.tutorCourses.each  do |course| %>
+        <li> <%= course.code %> </li>
+      <% end %>
+    </ul>
+</p>

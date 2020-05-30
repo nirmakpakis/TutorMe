@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+        <h2> Courses: </h2>
+        <br/>
+        <ul>
+            <% @courses.each do |course| %>
+            <li>
+                <%= render 'course', course: course %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <br/>
+    <%= link_to new_course_path do %>
+        <span class="icon"><i class="fas fa-plus-square"></i> create course </span>
+    <% end %>
+  </div>
+</section>

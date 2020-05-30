@@ -1,0 +1,15 @@
+<p>
+    <%=course.code %>: <%= course.name %>
+    <%= link_to edit_course_path(course), class: "level-item" do %>
+        <span class="icon"><i class="fas fa-edit"></i></span>
+    <% end %>
+
+    <%= link_to course_path(course), data: {:confirm => 'Are you sure?'}, :method => :delete do %>
+        <span class="icon"><i class="fas fa-trash"></i></span>
+    <% end %>
+
+    <br/>
+    <%= link_to "Sign up as a student", create_student_url(current_user.id, course.id) %>  
+    <br/>
+    <%= link_to "Sign up as a tutor", create_tutor_url(current_user.id, course.id) %>
+</p>

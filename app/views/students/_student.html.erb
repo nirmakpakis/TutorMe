@@ -1,0 +1,8 @@
+<p>
+    <h3> <%= student.email %> </h3>
+    <ul>
+      <% student.studentCourses.each  do |course| %>
+        <li> <%= course.code %> </li>
+      <% end %>
+    </ul>
+</p>

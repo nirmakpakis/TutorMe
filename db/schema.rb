@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_234917) do
+ActiveRecord::Schema.define(version: 2020_05_30_195427) do
 
   create_table "courses", force: :cascade do |t|
     t.string "code"
@@ -18,6 +18,45 @@ ActiveRecord::Schema.define(version: 2020_05_24_234917) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["code"], name: "index_courses_on_code", unique: true
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "receivings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_receivings_on_course_id"
+    t.index ["user_id"], name: "index_receivings_on_user_id"
+  end
+
+  create_table "student_subscriptions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "teachings", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_teachings_on_course_id"
+    t.index ["user_id"], name: "index_teachings_on_user_id"
+  end
+
+  create_table "tutor_subscriptions", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tutors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,4 +71,8 @@ ActiveRecord::Schema.define(version: 2020_05_24_234917) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "receivings", "courses"
+  add_foreign_key "receivings", "users"
+  add_foreign_key "teachings", "courses"
+  add_foreign_key "teachings", "users"
 end

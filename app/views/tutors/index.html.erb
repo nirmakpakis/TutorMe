@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+    <div class="columns">
+        <h2> Tutors: </h2>
+        <br/>
+        <ul>
+            <% @tutors.each do |tutor| %>
+            <li>
+                <%= render 'tutor', tutor: tutor %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <br/>
+  </div>
+</section>

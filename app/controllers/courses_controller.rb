@@ -25,7 +25,7 @@ class CoursesController < SecureController
       if @course.save
         redirect_to courses_path, notice: 'Course was successfully created.' 
       else
-        render courses_url, alert: 'Cant create this course.' 
+        render courses_url, alert: "Can't create this course." 
       end
   end
 
@@ -34,7 +34,8 @@ class CoursesController < SecureController
       if @course.update(course_params)
         redirect_to @course, notice: 'Course was successfully updated.' 
       else
-        render :edit 
+        @course.destroy!
+        redirect_to courses_path, alert: "Can't create this course code is not unique." 
       end
   end
 

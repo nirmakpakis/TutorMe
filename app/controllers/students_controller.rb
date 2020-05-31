@@ -26,4 +26,5 @@ class StudentsController < SecureController
             return true
         end
     end
+    
 end

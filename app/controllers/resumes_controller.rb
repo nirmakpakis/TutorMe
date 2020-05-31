@@ -1,4 +1,7 @@
 class ResumesController < SecureController
+   
+   # inspired from: https://www.tutorialspoint.com/ruby-on-rails/rails-file-uploading.htm
+
   def index
      @resumes = Resume.all.select{|resume| resume.user_id == current_user.id}
   end

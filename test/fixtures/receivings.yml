@@ -1,9 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: 
-  course: one
+receiving1:
+  user: user1
+  studentCourse: course1
 
-two:
-  user: 
-  course: two

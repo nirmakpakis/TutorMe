@@ -1,7 +1,11 @@
 <%= form_for(course) do |f| %>
-Code: <%= f.text_field :code %>
+Code: 
 <br/>
-Name: <%= f.text_field :name %>
+<%= f.text_field :code %>
+<br/>
+Name:
+<br/>
+<%= f.text_field :name %>
 <br/>
 <br/>
 <%= f.button :submit, class: "button btn-primary is-info" %>

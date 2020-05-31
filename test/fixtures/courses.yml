@@ -4,8 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+course1:
+    id: 1
+    code: COMP 202
+    name: Introduction to Computer Science
+
+course2:
+    id: 2
+    code: COMP 303
+    name: Introduction to Functional Programming
+
+course3:
+    id: 3
+    code: COMP 323
+    name: Introduction to Swimming Programming

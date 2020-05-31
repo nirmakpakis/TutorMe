@@ -1,5 +1,5 @@
 <p>
-    <h3> <%= student.email %> </h3>
+    <h4> <%= student.email.split("@")[0] %> </h4>
     <ul>
       <% student.studentCourses.each  do |course| %>
         <li> <%= course.code %> </li>

@@ -1,5 +1,12 @@
 <p>
-    <h4><%= tutor.email.split("@")[0] %></h4>
+    <% if tutor.resumes.empty? %>
+      <h4><%= tutor.email.split("@")[0] %></h4>
+    <% else %>
+      <a href=<%= tutor.resumes.last.attachment_url %> target="_blank">
+        <h4><%= tutor.email.split("@")[0] %></h4>
+      </a>
+    <% end %>
+
     <ul>
       <% tutor.tutorCourses.each  do |course| %>
         <li> <%= course.code %> </li>

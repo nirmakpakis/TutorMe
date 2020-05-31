@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_195427) do
+ActiveRecord::Schema.define(version: 2020_05_31_010029) do
 
   create_table "courses", force: :cascade do |t|
     t.string "code"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 2020_05_30_195427) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["course_id"], name: "index_receivings_on_course_id"
     t.index ["user_id"], name: "index_receivings_on_user_id"
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string "name"
+    t.string "attachment"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_resumes_on_user_id"
   end
 
   create_table "student_subscriptions", force: :cascade do |t|
@@ -73,6 +82,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_195427) do
 
   add_foreign_key "receivings", "courses"
   add_foreign_key "receivings", "users"
+  add_foreign_key "resumes", "users"
   add_foreign_key "teachings", "courses"
   add_foreign_key "teachings", "users"
 end

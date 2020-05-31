@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :receivings
   has_many :tutorCourses, :class_name => "Course", through: :teachings
   has_many :studentCourses, :class_name => "Course", through: :receivings
+  has_many :resumes, dependent: :destroy
 end

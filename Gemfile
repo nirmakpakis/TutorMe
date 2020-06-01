@@ -24,7 +24,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'pry', '~> 0.12.2'
 gem 'devise'
-gem 'sqlite3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -38,6 +37,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'

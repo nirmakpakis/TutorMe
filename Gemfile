@@ -24,6 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'pry', '~> 0.12.2'
 gem 'devise'
+gem 'sqlite3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

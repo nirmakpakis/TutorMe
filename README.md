@@ -4,7 +4,7 @@
 
 TutorMe allows students to tutor and get tutoring. You can sign up as a student or a tutor for any of the classes.
 
-img(https://i.postimg.cc/W107n8j2/Screen-Shot-2020-06-03-at-12-31-53-PM.png)
+![](https://i.postimg.cc/W107n8j2/Screen-Shot-2020-06-03-at-12-31-53-PM.png)
 
 ### Ruby version
 ruby '2.6.3'
